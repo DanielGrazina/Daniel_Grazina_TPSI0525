@@ -81,7 +81,91 @@ function exercicio10() {
   console.log(`Divisores de ${num}:`, divisores(num).join(", "));
 }
 
+// Exercício 11
+function exercicio11() {
+  for (let i = 1; i <= 5; i++) console.log(String(i).repeat(i));
+}
 
+// Exercício 12
+function exercicio12() {
+  let n = 10, contagem = 0;
+  for (let i = 1; i < n; i++) {
+    console.log(`${n} + ${i} =`, n + i);
+    console.log(`${n} - ${i} =`, n - i);
+    console.log(`${n} * ${i} =`, n * i);
+    console.log(`${n} / ${i} =`, (n / i).toFixed(2));
+    contagem += 4;
+  }
+  console.log("Total de operações:", contagem);
+}
+
+// Exercício 13
+function exercicio13() {
+  let tab = 7;
+  for (let i = 1; i <= 10; i++) console.log(`${tab} x ${i} = ${tab * i}`);
+}
+
+// Exercício 14
+function exercicio14() {
+  for (let t = 1; t <= 100; t++) {
+    console.log(`\nTabuada do ${t}`);
+    for (let i = 1; i <= 10; i++) console.log(`${t} x ${i} = ${t * i}`);
+  }
+}
+
+// Exercício 15
+function exercicio15() {
+  let linha = "";
+  for (let i = 0; i <= 255; i++) {
+    linha += `${i}:${String.fromCharCode(i)}\t`;
+
+    // a cada 20 valores, imprime e limpa a linha
+    if ((i + 1) % 20 === 0) {
+      console.log(linha);
+      linha = "";
+    }
+  }
+
+  // imprime o que sobrar (se não for múltiplo de 20 exato)
+  if (linha !== "") console.log(linha);
+}
+
+// Exercício 16
+function exercicio16() {
+  let pares50 = [];
+  while (pares50.length < 30) {
+    let num = Math.floor(Math.random() * 50) + 1;
+    if (num % 2 === 0) pares50.push(num);
+  }
+  let media = pares50.reduce((a, b) => a + b, 0) / pares50.length;
+  console.log("Média de 30 pares entre 1 e 50:", media.toFixed(2));
+}
+
+// Exercício 17
+function exercicio17() {
+  let mult5 = [];
+  for (let i = 1; i <= 1000; i++) if (i % 5 === 0 && i % 3 !== 0) mult5.push(i);
+  console.log("Múltiplos de 5 não múltiplos de 3:", mult5.join(", "));
+}
+
+// Exercício 18
+function ehPerfeito(n) {
+  let soma = 0;
+  for (let i = 1; i < n; i++) if (n % i === 0) soma += i;
+  return soma === n;
+}
+function exercicio18() {
+  let perfeitos = [];
+  for (let i = 1; i <= 1000; i++) if (ehPerfeito(i)) perfeitos.push(i);
+  console.log("Números perfeitos até 1000:", perfeitos.join(", "));
+}
+
+// Exercício 19
+function exercicio19() {
+  let fib = [1, 1];
+  while (fib.length < 60) fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+  console.log("60 primeiros Fibonacci:", fib.join(", "));
+}
 
 // Menu
 function menu() {
@@ -104,7 +188,15 @@ function menu() {
       case 8: exercicio8(); break;
       case 9: exercicio9(); break;
       case 10: exercicio10(); break;
-      
+      case 11: exercicio11(); break;
+      case 12: exercicio12(); break;
+      case 13: exercicio13(); break;
+      case 14: exercicio14(); break;
+      case 15: exercicio15(); break;
+      case 16: exercicio16(); break;
+      case 17: exercicio17(); break;
+      case 18: exercicio18(); break;
+      case 19: exercicio19(); break;
       default: console.log("Opção inválida!");
     }
     readline.close();
