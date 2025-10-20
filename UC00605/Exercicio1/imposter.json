@@ -30,12 +30,10 @@
             {
               "equals": {
                 "method": "GET",
-                "path": "/api/cars"
-              }
-            },
-            {
-              "matches": {
-                "querystring": ".*brand=Toyota.*"
+                "path": "/api/cars",
+                "query": {
+                  "brand": "Toyota"
+                }
               }
             }
           ],

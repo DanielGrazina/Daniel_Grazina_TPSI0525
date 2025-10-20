@@ -1,8 +1,4 @@
-{"level":"info","message":"[mb:2525] mountebank v2.9.2 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2025-10-20T09:55:06.587Z"}
-{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2025-10-20T09:55:06.625Z"}
-{"level":"info","message":"[http:3000] Open for business...","timestamp":"2025-10-20T09:55:06.640Z"}
-{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62050 => GET /api/cars?brand=Toyota","timestamp":"2025-10-20T09:55:11.946Z"}
-{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62053 => GET /api/cars?brand=Toyota","timestamp":"2025-10-20T09:55:12.957Z"}
-{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62054 => GET /api/cars?brand=Toyota","timestamp":"2025-10-20T09:55:13.197Z"}
-{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62055 => GET /api/marcas","timestamp":"2025-10-20T09:55:14.342Z"}
-{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62057 => GET /api/cars?brand=Toyota","timestamp":"2025-10-20T09:55:16.206Z"}
+{"level":"info","message":"[mb:2525] mountebank v2.9.2 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2025-10-20T12:27:53.568Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2025-10-20T12:27:53.613Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2025-10-20T12:27:53.629Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:57736 => GET /api/cars?brand=Toyota","timestamp":"2025-10-20T12:27:57.024Z"}
