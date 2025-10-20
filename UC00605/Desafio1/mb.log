@@ -1,0 +1,9 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.2 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2025-10-14T16:54:30.345Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2025-10-14T16:54:30.389Z"}
+{"level":"info","message":"[http:4545 Desafio1] Open for business...","timestamp":"2025-10-14T16:54:30.397Z"}
+{"level":"info","message":"[http:4545 Desafio1] ::1:55757 => GET /ola","timestamp":"2025-10-14T16:54:35.676Z"}
+{"level":"info","message":"[http:4545 Desafio1] ::1:55767 => GET /info","timestamp":"2025-10-14T16:54:43.521Z"}
+{"level":"info","message":"[http:4545 Desafio1] ::1:55772 => POST /login","timestamp":"2025-10-14T16:54:46.636Z"}
+{"level":"info","message":"[http:4545 Desafio1] ::1:55775 => POST /login","timestamp":"2025-10-14T16:54:49.376Z"}
+{"level":"info","message":"[http:4545 Desafio1] ::1:55779 => GET /unstable","timestamp":"2025-10-14T16:54:52.801Z"}
+{"level":"info","message":"[http:4545 Desafio1] ::1:55781 => GET /demora","timestamp":"2025-10-14T16:54:54.911Z"}

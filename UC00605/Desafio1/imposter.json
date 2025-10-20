@@ -1,0 +1,174 @@
+{
+    "port": 4545,
+    "protocol": "http",
+    "name": "Desafio1",
+    "recordRequests": true,
+    "stubs": [
+        {
+            "predicates": [
+                {
+                    "equals": {
+                        "method": "GET",
+                        "path": "/ola"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Type": "application/json"
+                        },
+                        "body": {
+                            "mensagem": "Olá do Mountebank! 👋"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "equals": {
+                        "method": "GET",
+                        "path": "/info"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Type": "application/json"
+                        },
+                        "body": {
+                            "projeto": "desafio1",
+                            "autor": "Daniel Grazina",
+                            "linguagem": "algo",
+                            "objetivo": "Simular API fake com Mountebank"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "equals": {
+                        "method": "POST",
+                        "path": "/login"
+                    }
+                },
+                {
+                    "contains": {
+                        "body": {
+                            "username": "admin",
+                            "password": "1234"
+                        }
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Type": "application/json"
+                        },
+                        "body": {
+                            "login": "sucesso",
+                            "token": "abc123xyz"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "equals": {
+                        "method": "POST",
+                        "path": "/login"
+                    }
+                },
+                {
+                    "exists": {
+                        "body": true
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 401,
+                        "headers": {
+                            "Content-Type": "application/json"
+                        },
+                        "body": {
+                            "erro": "Credenciais inválidas"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "equals": {
+                        "method": "GET",
+                        "path": "/unstable"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 500,
+                        "body": "Erro temporário - tenta novamente"
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Type": "application/json"
+                        },
+                        "body": {
+                            "mensagem": "Tudo OK agora 😄"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "equals": {
+                        "method": "GET",
+                        "path": "/demora"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Type": "application/json"
+                        },
+                        "body": {
+                            "mensagem": "Esta resposta demorou 2 segundos!"
+                        }
+                    },
+                    "behaviors": [
+                        {
+                            "wait": 2000
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

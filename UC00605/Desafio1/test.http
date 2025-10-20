@@ -1,0 +1,38 @@
+@baseUrl = http://localhost:4545
+@token = 12345
+
+### GET /ola
+GET {{baseUrl}}/ola
+Accept: application/json
+
+###
+
+### GET com query params
+GET {{baseUrl}}/search?q=mountebank&page=1
+Accept: application/json
+
+###
+
+### POST JSON /login
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "username": "daniel",
+  "password": "12345"
+}
+
+###
+
+### POST form-urlencoded
+POST {{baseUrl}}/form
+Content-Type: application/x-www-form-urlencoded
+
+field1=value1&field2=value2
+
+###
+
+### GET protegido com Bearer
+GET {{baseUrl}}/protected
+Authorization: Bearer {{token}}
+Accept: application/json

@@ -1,0 +1,24 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.2 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2025-10-14T16:15:53.033Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2025-10-14T16:15:53.075Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] Open for business...","timestamp":"2025-10-14T16:15:53.084Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60812 => GET /info","timestamp":"2025-10-14T16:15:56.165Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60844 => POST /login","timestamp":"2025-10-14T16:16:45.417Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60848 => GET /info","timestamp":"2025-10-14T16:16:48.538Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60869 => POST /login","timestamp":"2025-10-14T16:17:23.153Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60873 => POST /login","timestamp":"2025-10-14T16:17:25.497Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60895 => GET /unstable","timestamp":"2025-10-14T16:17:57.411Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60900 => GET /unstable","timestamp":"2025-10-14T16:18:00.895Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60903 => GET /unstable","timestamp":"2025-10-14T16:18:01.690Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60905 => GET /unstable","timestamp":"2025-10-14T16:18:02.832Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60925 => GET /demora","timestamp":"2025-10-14T16:18:28.430Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60982 => GET /ola","timestamp":"2025-10-14T16:19:46.459Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:60987 => GET /info","timestamp":"2025-10-14T16:19:49.993Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:55655 => POST /login","timestamp":"2025-10-14T16:38:46.408Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:55662 => POST /login","timestamp":"2025-10-14T16:38:51.274Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:55673 => GET /unstable","timestamp":"2025-10-14T16:38:59.838Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:55676 => GET /unstable","timestamp":"2025-10-14T16:39:00.858Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:55679 => GET /unstable","timestamp":"2025-10-14T16:39:01.824Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:55681 => GET /unstable","timestamp":"2025-10-14T16:39:02.647Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:55683 => GET /unstable","timestamp":"2025-10-14T16:39:03.652Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:55686 => GET /unstable","timestamp":"2025-10-14T16:39:04.464Z"}
+{"level":"info","message":"[http:4545 ATECQuiz-Imposter] ::1:55695 => GET /demora","timestamp":"2025-10-14T16:39:14.425Z"}
