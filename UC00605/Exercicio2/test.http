@@ -1,0 +1,212 @@
+### Base URL
+@baseUrl = http://localhost:3000
+
+### ===== EXERCÍCIO 0: Preparação inicial =====
+### Verificar que o imposter está online
+GET {{baseUrl}}/api/test
+Accept: application/json
+
+### ===== EXERCÍCIO 1: GET /api/marcas =====
+### Deve retornar lista de marcas com status 200
+GET {{baseUrl}}/api/marcas
+Accept: application/json
+
+### ===== EXERCÍCIO 2: GET /api/cars com brand=Toyota =====
+### Deve retornar resultados específicos do brand Toyota
+GET {{baseUrl}}/api/cars?brand=Toyota
+Accept: application/json
+
+### ===== EXERCÍCIO 3: GET /api/cars sem parâmetros =====
+### Deve retornar results vazio
+GET {{baseUrl}}/api/cars
+Accept: application/json
+
+### ===== EXERCÍCIO 4: POST /api/login (credenciais corretas) =====
+### Deve retornar 200 com token válido
+POST {{baseUrl}}/api/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "secret"
+}
+
+### ===== EXERCÍCIO 5: POST /api/login (credenciais inválidas) =====
+### Deve retornar 401 com erro
+POST {{baseUrl}}/api/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "errada"
+}
+
+### ===== EXERCÍCIO 6: POST /api/users (email duplicado) =====
+### Deve retornar 409 com erro email_exists
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Teste User",
+  "email": "exists@example.com",
+  "idade": 30
+}
+
+### ===== EXERCÍCIO 7: POST /api/users (novo email) =====
+### Deve retornar 201 com Location header e id
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Novo User",
+  "email": "novo@example.com",
+  "idade": 25
+}
+
+### ===== EXERCÍCIO 8: POST /api/temperature (sem value) =====
+### Deve retornar 400 com erro missing_field
+POST {{baseUrl}}/api/temperature
+Content-Type: application/json
+
+{
+  "sensor_id": "sensor1"
+}
+
+### ===== EXERCÍCIO 9: POST /api/temperature (com value) =====
+### Deve retornar 201 com status created
+POST {{baseUrl}}/api/temperature
+Content-Type: application/json
+
+{
+  "sensor_id": "sensor1",
+  "value": 25.5
+}
+
+### ===== EXERCÍCIO 10: POST /api/tasks (title duplicate) =====
+### Deve retornar 409 com erro duplicate_task
+POST {{baseUrl}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "duplicate",
+  "description": "Uma tarefa",
+  "priority": "high"
+}
+
+### ===== EXERCÍCIO 11: POST /api/tasks (nova tarefa) =====
+### Deve retornar 201 com Location header e id
+POST {{baseUrl}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Minha tarefa",
+  "description": "Descrição da tarefa",
+  "priority": "medium"
+}
+
+### ===== EXERCÍCIO 12: POST /api/auth (credenciais válidas) =====
+### Deve retornar 200 com token e expires_in
+POST {{baseUrl}}/api/auth
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "pass1"
+}
+
+### ===== EXERCÍCIO 12B: POST /api/auth (credenciais inválidas) =====
+### Deve retornar 401 com erro
+POST {{baseUrl}}/api/auth
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "passErrada"
+}
+
+### ===== EXERCÍCIO 13: GET /api/profile (com Authorization) =====
+### Deve retornar 200 com dados do perfil
+GET {{baseUrl}}/api/profile
+Accept: application/json
+Authorization: Bearer validtoken
+
+### ===== EXERCÍCIO 13B: GET /api/profile (sem Authorization) =====
+### Deve retornar 403 com erro forbidden
+GET {{baseUrl}}/api/profile
+Accept: application/json
+
+### ===== EXERCÍCIO 14: POST sem Content-Type =====
+### Deve retornar 415 Unsupported Media Type
+POST {{baseUrl}}/api/users
+
+{
+  "name": "Test"
+}
+
+### ===== EXERCÍCIO 15: GET para endpoint não definido =====
+### Deve retornar 404 not_found
+GET {{baseUrl}}/api/nao-existe
+Accept: application/json
+
+### ===== TESTES DE ROBUSTEZ: Login com ordem de campos diferente =====
+### Teste para verificar comportamento do deepEquals
+POST {{baseUrl}}/api/login
+Content-Type: application/json
+
+{
+  "password": "secret",
+  "username": "admin"
+}
+
+### ===== FLUXO DE INTEGRAÇÃO: Utilizador Real =====
+### Passo 1: Obter token via auth
+POST {{baseUrl}}/api/auth
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "pass1"
+}
+
+### Passo 2: Aceder ao perfil com token
+GET {{baseUrl}}/api/profile
+Accept: application/json
+Authorization: Bearer validtoken
+
+### Passo 3: Criar uma tarefa
+POST {{baseUrl}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Integração Test",
+  "description": "Teste de integração",
+  "priority": "high"
+}
+
+### Passo 4: Listar marcas
+GET {{baseUrl}}/api/marcas
+Accept: application/json
+
+### Passo 5: Procurar carros por marca
+GET {{baseUrl}}/api/cars?brand=Toyota
+Accept: application/json
+
+### Passo 6: Criar utilizador
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Utilizador Integração",
+  "email": "integracao@example.com",
+  "idade": 35
+}
+
+### Passo 7: Tentar criar utilizador com email duplicado
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Duplicado",
+  "email": "exists@example.com",
+  "idade": 40
+}

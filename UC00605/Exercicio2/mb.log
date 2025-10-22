@@ -1,0 +1,21 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.2 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2025-10-22T11:29:18.760Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2025-10-22T11:29:18.814Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2025-10-22T11:29:18.822Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59663 => GET /api/test","timestamp":"2025-10-22T11:29:22.088Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59665 => GET /api/test","timestamp":"2025-10-22T11:29:25.157Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59668 => GET /api/test","timestamp":"2025-10-22T11:29:26.520Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59669 => GET /api/test","timestamp":"2025-10-22T11:29:26.921Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59670 => GET /api/test","timestamp":"2025-10-22T11:29:27.547Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59671 => GET /api/test","timestamp":"2025-10-22T11:29:28.025Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59672 => GET /api/test","timestamp":"2025-10-22T11:29:28.483Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59674 => GET /api/test","timestamp":"2025-10-22T11:29:28.920Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59675 => GET /api/test","timestamp":"2025-10-22T11:29:29.287Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59676 => GET /api/test","timestamp":"2025-10-22T11:29:29.609Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59677 => GET /api/test","timestamp":"2025-10-22T11:29:29.903Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59678 => GET /api/test","timestamp":"2025-10-22T11:29:30.225Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59679 => GET /api/test","timestamp":"2025-10-22T11:29:30.508Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59681 => GET /api/test","timestamp":"2025-10-22T11:29:30.810Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59682 => GET /api/test","timestamp":"2025-10-22T11:29:31.112Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59683 => GET /api/test","timestamp":"2025-10-22T11:29:31.424Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59684 => GET /api/test","timestamp":"2025-10-22T11:29:31.729Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:59686 => GET /api/test","timestamp":"2025-10-22T11:29:32.049Z"}
