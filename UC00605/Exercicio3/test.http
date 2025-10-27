@@ -1,0 +1,395 @@
+### ============================================
+### 1. API GESTÃO DE ALUNOS (Port 3000)
+### ============================================
+
+### GET - Listar todos os alunos
+GET http://localhost:3000/api/alunos
+Content-Type: application/json
+
+###
+
+### GET - Obter aluno específico
+GET http://localhost:3000/api/alunos/1
+Content-Type: application/json
+
+###
+
+### POST - Criar novo aluno (sucesso)
+POST http://localhost:3000/api/alunos
+Content-Type: application/json
+
+{
+  "nome": "João Silva",
+  "idade": 16,
+  "curso": "Matemática"
+}
+
+###
+
+### POST - Criar aluno (erro - idade mínima)
+POST http://localhost:3000/api/alunos
+Content-Type: application/json
+
+{
+  "nome": "Maria",
+  "idade": 8,
+  "curso": "TI"
+}
+
+###
+
+### PUT - Atualizar aluno
+PUT http://localhost:3000/api/alunos/1
+Content-Type: application/json
+
+{
+  "nome": "Ana Costa",
+  "idade": 16,
+  "curso": "Informática"
+}
+
+###
+
+### DELETE - Remover aluno (sem permissão)
+DELETE http://localhost:3000/api/alunos/1
+Content-Type: application/json
+
+###
+
+### ============================================
+### 2. API INVENTÁRIO DE PRODUTOS (Port 3001)
+### ============================================
+
+### GET - Listar produtos
+GET http://localhost:3001/api/produtos
+Content-Type: application/json
+
+###
+
+### POST - Criar produto (sucesso)
+POST http://localhost:3001/api/produtos
+Content-Type: application/json
+
+{
+  "nome": "Porca",
+  "preco": 0.3,
+  "quantidade": 200
+}
+
+###
+
+### POST - Criar produto (erro - quantidade inválida)
+POST http://localhost:3001/api/produtos
+Content-Type: application/json
+
+{
+  "nome": "Parafuso",
+  "preco": 0.5,
+  "quantidade": -10
+}
+
+###
+
+### PUT - Atualizar stock
+PUT http://localhost:3001/api/produtos/1/stock
+Content-Type: application/json
+
+{
+  "quantidade": 50
+}
+
+###
+
+### DELETE - Remover produto (stock não zero)
+DELETE http://localhost:3001/api/produtos/1
+Content-Type: application/json
+
+###
+
+### ============================================
+### 3. API RESERVAS DE HOTEL (Port 3002)
+### ============================================
+
+### GET - Listar reservas
+GET http://localhost:3002/api/reservas
+Content-Type: application/json
+
+###
+
+### POST - Criar reserva (sucesso)
+POST http://localhost:3002/api/reservas
+Content-Type: application/json
+
+{
+  "cliente": "Carlos Mendes",
+  "checkin": "2025-11-01",
+  "checkout": "2025-11-05",
+  "tipo_quarto": "duplo"
+}
+
+###
+
+### POST - Criar reserva (erro - checkout anterior ao checkin)
+POST http://localhost:3002/api/reservas
+Content-Type: application/json
+
+{
+  "cliente": "Ana Silva",
+  "checkin": "2025-11-10",
+  "checkout": "2025-11-08",
+  "tipo_quarto": "simples"
+}
+
+###
+
+### POST - Criar reserva (erro - sem disponibilidade)
+POST http://localhost:3002/api/reservas
+Content-Type: application/json
+
+{
+  "cliente": "Pedro Costa",
+  "checkin": "2025-12-20",
+  "checkout": "2025-12-25",
+  "tipo_quarto": "suite"
+}
+
+###
+
+### PUT - Atualizar reserva
+PUT http://localhost:3002/api/reservas/10
+Content-Type: application/json
+
+{
+  "tipo_quarto": "suite",
+  "checkout": "2025-11-06"
+}
+
+###
+
+### DELETE - Cancelar reserva (não permitido após checkin)
+DELETE http://localhost:3002/api/reservas/10
+Content-Type: application/json
+
+###
+
+### ============================================
+### 4. API BIBLIOTECA DIGITAL (Port 3003)
+### ============================================
+
+### GET - Listar livros
+GET http://localhost:3003/api/livros
+Content-Type: application/json
+
+###
+
+### POST - Registar empréstimo (sucesso)
+POST http://localhost:3003/api/emprestimos
+Content-Type: application/json
+
+{
+  "cliente": "José Santos",
+  "livro_id": 1,
+  "data_emprestimo": "2025-10-27"
+}
+
+###
+
+### POST - Registar empréstimo (livro não encontrado)
+POST http://localhost:3003/api/emprestimos
+Content-Type: application/json
+
+{
+  "cliente": "Maria Lima",
+  "livro_id": 999,
+  "data_emprestimo": "2025-10-27"
+}
+
+###
+
+### PUT - Devolver livro
+PUT http://localhost:3003/api/emprestimos/5/devolucao
+Content-Type: application/json
+
+{
+  "data_devolucao": "2025-11-10"
+}
+
+###
+
+### ============================================
+### 5. API FUNCIONÁRIOS (Port 3004)
+### ============================================
+
+### GET - Listar funcionários
+GET http://localhost:3004/api/funcionarios
+Content-Type: application/json
+
+###
+
+### POST - Criar funcionário (sucesso)
+POST http://localhost:3004/api/funcionarios
+Content-Type: application/json
+
+{
+  "nome": "António Ferreira",
+  "cargo": "Desenvolvedor",
+  "salario": 1200
+}
+
+###
+
+### POST - Criar funcionário (erro - salário abaixo do mínimo)
+POST http://localhost:3004/api/funcionarios
+Content-Type: application/json
+
+{
+  "nome": "Rita Sousa",
+  "cargo": "Estagiário",
+  "salario": 500
+}
+
+###
+
+### PUT - Atualizar salário
+PUT http://localhost:3004/api/funcionarios/1/salario
+Content-Type: application/json
+
+{
+  "salario": 1500
+}
+
+###
+
+### DELETE - Remover funcionário (tem tarefas pendentes)
+DELETE http://localhost:3004/api/funcionarios/1
+Content-Type: application/json
+
+###
+
+### ============================================
+### 6. API TAREFAS (Port 3005)
+### ============================================
+
+### GET - Listar tarefas
+GET http://localhost:3005/api/tarefas
+Content-Type: application/json
+
+###
+
+### POST - Criar tarefa (sucesso)
+POST http://localhost:3005/api/tarefas
+Content-Type: application/json
+
+{
+  "titulo": "Implementar API",
+  "descricao": "Criar endpoints REST para gestão de utilizadores"
+}
+
+###
+
+### POST - Criar tarefa (erro - título vazio)
+POST http://localhost:3005/api/tarefas
+Content-Type: application/json
+
+{
+  "titulo": "",
+  "descricao": "Tarefa sem título"
+}
+
+###
+
+### PUT - Atualizar tarefa
+PUT http://localhost:3005/api/tarefas/1
+Content-Type: application/json
+
+{
+  "titulo": "Implementar API REST",
+  "descricao": "API completa com autenticação",
+  "estado": "concluída"
+}
+
+###
+
+### DELETE - Eliminar tarefa (só se concluída)
+DELETE http://localhost:3005/api/tarefas/1
+Content-Type: application/json
+
+###
+
+### ============================================
+### 7. API CLIENTES E PEDIDOS (Port 3006)
+### ============================================
+
+### GET - Listar clientes
+GET http://localhost:3006/api/clientes
+Content-Type: application/json
+
+###
+
+### POST - Criar cliente
+POST http://localhost:3006/api/clientes
+Content-Type: application/json
+
+{
+  "nome": "Empresa XYZ Lda",
+  "email": "contato@xyz.pt",
+  "telefone": "912345678"
+}
+
+###
+
+### GET - Listar pedidos de um cliente
+GET http://localhost:3006/api/clientes/1/pedidos
+Content-Type: application/json
+
+###
+
+### POST - Criar pedido (sucesso)
+POST http://localhost:3006/api/pedidos
+Content-Type: application/json
+
+{
+  "cliente_id": 1,
+  "produto": "Laptop Dell",
+  "quantidade": 5
+}
+
+###
+
+### POST - Criar pedido (erro - quantidade inválida)
+POST http://localhost:3006/api/pedidos
+Content-Type: application/json
+
+{
+  "cliente_id": 1,
+  "produto": "Monitor",
+  "quantidade": -2
+}
+
+###
+
+### POST - Criar pedido (erro - cliente inexistente)
+POST http://localhost:3006/api/pedidos
+Content-Type: application/json
+
+{
+  "cliente_id": 999,
+  "produto": "Teclado",
+  "quantidade": 10
+}
+
+###
+
+### PUT - Atualizar estado do pedido
+PUT http://localhost:3006/api/pedidos/100
+Content-Type: application/json
+
+{
+  "estado": "Enviado"
+}
+
+###
+
+### DELETE - Cancelar pedido (só em processamento)
+DELETE http://localhost:3006/api/pedidos/100
+Content-Type: application/json

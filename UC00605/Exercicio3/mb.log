@@ -1,0 +1,9 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.2 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2025-10-27T10:44:37.047Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2025-10-27T10:44:37.097Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] Open for business...","timestamp":"2025-10-27T10:44:37.110Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] Open for business...","timestamp":"2025-10-27T10:44:37.110Z"}
+{"level":"info","message":"[http:3002 Reservas de Hotel] Open for business...","timestamp":"2025-10-27T10:44:37.110Z"}
+{"level":"info","message":"[http:3003 Biblioteca Digital] Open for business...","timestamp":"2025-10-27T10:44:37.111Z"}
+{"level":"info","message":"[http:3004 Funcionários] Open for business...","timestamp":"2025-10-27T10:44:37.111Z"}
+{"level":"info","message":"[http:3005 Tarefas] Open for business...","timestamp":"2025-10-27T10:44:37.111Z"}
+{"level":"info","message":"[http:3006 Clientes e Pedidos] Open for business...","timestamp":"2025-10-27T10:44:37.111Z"}

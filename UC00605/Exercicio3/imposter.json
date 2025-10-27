@@ -1,0 +1,764 @@
+{
+    "imposters": [
+        {
+            "port": 3000,
+            "protocol": "http",
+            "name": "Gestão de Alunos",
+            "stubs": [
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/api/alunos"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "[{\"id\":1,\"nome\":\"Ana\",\"idade\":15,\"curso\":\"TI\"}]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/api/alunos/1"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"id\":1,\"nome\":\"Ana\",\"idade\":15,\"curso\":\"TI\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "POST",
+                                "path": "/api/alunos"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 201,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"id\":2,\"mensagem\":\"Aluno criado\"}"
+                            }
+                        },
+                        {
+                            "is": {
+                                "statusCode": 400,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Idade mínima não atingida\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "PUT",
+                                "path": "/api/alunos/1"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Aluno atualizado\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "DELETE",
+                                "path": "/api/alunos/1"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 403,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Sem permissão para apagar\"}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "port": 3001,
+            "protocol": "http",
+            "name": "Inventário de Produtos",
+            "stubs": [
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/api/produtos"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "[{\"id\":1,\"nome\":\"Parafuso\",\"preco\":0.5,\"quantidade\":100}]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "POST",
+                                "path": "/api/produtos"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 201,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"id\":2,\"mensagem\":\"Produto criado\"}"
+                            }
+                        },
+                        {
+                            "is": {
+                                "statusCode": 400,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Quantidade inválida\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "PUT",
+                                "path": "/api/produtos/1/stock"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Stock atualizado\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "DELETE",
+                                "path": "/api/produtos/1"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 409,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Stock não é zero\"}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "port": 3002,
+            "protocol": "http",
+            "name": "Reservas de Hotel",
+            "stubs": [
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/api/reservas"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "[]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "POST",
+                                "path": "/api/reservas"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 201,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"id\":10,\"mensagem\":\"Reserva criada\"}"
+                            }
+                        },
+                        {
+                            "is": {
+                                "statusCode": 400,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Checkout anterior ao checkin\"}"
+                            }
+                        },
+                        {
+                            "is": {
+                                "statusCode": 409,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Sem disponibilidade\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "PUT",
+                                "path": "/api/reservas/10"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Reserva atualizada\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "DELETE",
+                                "path": "/api/reservas/10"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 403,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Não é possível cancelar após checkin\"}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "port": 3003,
+            "protocol": "http",
+            "name": "Biblioteca Digital",
+            "stubs": [
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/api/livros"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "[{\"id\":1,\"titulo\":\"1984\",\"emprestado\":false}]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "POST",
+                                "path": "/api/emprestimos"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 201,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Empréstimo registado\"}"
+                            }
+                        },
+                        {
+                            "is": {
+                                "statusCode": 404,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Livro não encontrado\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "PUT",
+                                "path": "/api/emprestimos/5/devolucao"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Livro devolvido\"}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "port": 3004,
+            "protocol": "http",
+            "name": "Funcionários",
+            "stubs": [
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/api/funcionarios"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "[]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "POST",
+                                "path": "/api/funcionarios"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 201,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Funcionário criado\"}"
+                            }
+                        },
+                        {
+                            "is": {
+                                "statusCode": 400,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Salário abaixo do mínimo\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "PUT",
+                                "path": "/api/funcionarios/1/salario"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Salário atualizado\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "DELETE",
+                                "path": "/api/funcionarios/1"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 400,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Funcionário tem tarefas pendentes\"}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "port": 3005,
+            "protocol": "http",
+            "name": "Tarefas",
+            "stubs": [
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/api/tarefas"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "[]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "POST",
+                                "path": "/api/tarefas"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 201,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Tarefa criada\"}"
+                            }
+                        },
+                        {
+                            "is": {
+                                "statusCode": 400,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Título vazio\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "PUT",
+                                "path": "/api/tarefas/1"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Tarefa atualizada\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "DELETE",
+                                "path": "/api/tarefas/1"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 403,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Só pode apagar tarefa concluída\"}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "port": 3006,
+            "protocol": "http",
+            "name": "Clientes e Pedidos",
+            "stubs": [
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/api/clientes"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "[]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "POST",
+                                "path": "/api/clientes"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 201,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Cliente criado\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/api/clientes/1/pedidos"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "[]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "POST",
+                                "path": "/api/pedidos"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 201,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Pedido criado\"}"
+                            }
+                        },
+                        {
+                            "is": {
+                                "statusCode": 400,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Quantidade inválida\"}"
+                            }
+                        },
+                        {
+                            "is": {
+                                "statusCode": 404,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Cliente inexistente\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "PUT",
+                                "path": "/api/pedidos/100"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"mensagem\":\"Estado atualizado\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "DELETE",
+                                "path": "/api/pedidos/100"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 403,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": "{\"erro\":\"Só enquanto 'Em processamento'\"}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
