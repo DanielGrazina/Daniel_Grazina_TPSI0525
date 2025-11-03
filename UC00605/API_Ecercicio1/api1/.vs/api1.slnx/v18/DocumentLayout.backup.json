@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\DEV\\Daniel_Grazina_TPSI0525\\UC00605\\API_Ecercicio1\\api1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D101B67D-3F73-BC67-0B65-5D3AFB754709}|api1\\api1.csproj|c:\\dev\\daniel_grazina_tpsi0525\\uc00605\\api_ecercicio1\\api1\\api1\\controllers\\standcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D101B67D-3F73-BC67-0B65-5D3AFB754709}|api1\\api1.csproj|solutionrelative:api1\\controllers\\standcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D101B67D-3F73-BC67-0B65-5D3AFB754709}|api1\\api1.csproj|c:\\dev\\daniel_grazina_tpsi0525\\uc00605\\api_ecercicio1\\api1\\api1\\data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D101B67D-3F73-BC67-0B65-5D3AFB754709}|api1\\api1.csproj|solutionrelative:api1\\data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D101B67D-3F73-BC67-0B65-5D3AFB754709}|api1\\api1.csproj|c:\\dev\\daniel_grazina_tpsi0525\\uc00605\\api_ecercicio1\\api1\\api1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D101B67D-3F73-BC67-0B65-5D3AFB754709}|api1\\api1.csproj|solutionrelative:api1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D101B67D-3F73-BC67-0B65-5D3AFB754709}|api1\\api1.csproj|c:\\dev\\daniel_grazina_tpsi0525\\uc00605\\api_ecercicio1\\api1\\api1\\models\\standcars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D101B67D-3F73-BC67-0B65-5D3AFB754709}|api1\\api1.csproj|solutionrelative:api1\\models\\standcars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiContext.cs",
+              "DocumentMoniker": "C:\\DEV\\Daniel_Grazina_TPSI0525\\UC00605\\API_Ecercicio1\\api1\\api1\\Data\\ApiContext.cs",
+              "RelativeDocumentMoniker": "api1\\Data\\ApiContext.cs",
+              "ToolTip": "C:\\DEV\\Daniel_Grazina_TPSI0525\\UC00605\\API_Ecercicio1\\api1\\api1\\Data\\ApiContext.cs",
+              "RelativeToolTip": "api1\\Data\\ApiContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T18:35:42.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DEV\\Daniel_Grazina_TPSI0525\\UC00605\\API_Ecercicio1\\api1\\api1\\Program.cs",
+              "RelativeDocumentMoniker": "api1\\Program.cs",
+              "ToolTip": "C:\\DEV\\Daniel_Grazina_TPSI0525\\UC00605\\API_Ecercicio1\\api1\\api1\\Program.cs",
+              "RelativeToolTip": "api1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T18:35:46.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StandCars.cs",
+              "DocumentMoniker": "C:\\DEV\\Daniel_Grazina_TPSI0525\\UC00605\\API_Ecercicio1\\api1\\api1\\Models\\StandCars.cs",
+              "RelativeDocumentMoniker": "api1\\Models\\StandCars.cs",
+              "ToolTip": "C:\\DEV\\Daniel_Grazina_TPSI0525\\UC00605\\API_Ecercicio1\\api1\\api1\\Models\\StandCars.cs",
+              "RelativeToolTip": "api1\\Models\\StandCars.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T18:35:44.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StandController.cs",
+              "DocumentMoniker": "C:\\DEV\\Daniel_Grazina_TPSI0525\\UC00605\\API_Ecercicio1\\api1\\api1\\Controllers\\StandController.cs",
+              "RelativeDocumentMoniker": "api1\\Controllers\\StandController.cs",
+              "ToolTip": "C:\\DEV\\Daniel_Grazina_TPSI0525\\UC00605\\API_Ecercicio1\\api1\\api1\\Controllers\\StandController.cs",
+              "RelativeToolTip": "api1\\Controllers\\StandController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T18:35:41.758Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

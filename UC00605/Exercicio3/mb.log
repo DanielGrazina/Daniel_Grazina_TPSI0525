@@ -7,3 +7,30 @@
 {"level":"info","message":"[http:3004 Funcionários] Open for business...","timestamp":"2025-10-27T10:44:37.111Z"}
 {"level":"info","message":"[http:3005 Tarefas] Open for business...","timestamp":"2025-10-27T10:44:37.111Z"}
 {"level":"info","message":"[http:3006 Clientes e Pedidos] Open for business...","timestamp":"2025-10-27T10:44:37.111Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61416 => GET /api/alunos","timestamp":"2025-10-27T10:44:40.936Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61419 => GET /api/alunos/1","timestamp":"2025-10-27T10:44:44.266Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61422 => GET /api/alunos/1","timestamp":"2025-10-27T10:44:49.262Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61424 => GET /api/alunos","timestamp":"2025-10-27T10:44:50.392Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61425 => GET /api/alunos/1","timestamp":"2025-10-27T10:44:52.097Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61428 => POST /api/alunos","timestamp":"2025-10-27T10:44:53.640Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61431 => GET /api/alunos/1","timestamp":"2025-10-27T10:44:57.389Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61434 => POST /api/alunos","timestamp":"2025-10-27T10:45:00.005Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61437 => POST /api/alunos","timestamp":"2025-10-27T10:45:04.171Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61441 => POST /api/alunos","timestamp":"2025-10-27T10:45:08.242Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61443 => POST /api/alunos","timestamp":"2025-10-27T10:45:12.066Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61447 => PUT /api/alunos/1","timestamp":"2025-10-27T10:45:15.048Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61450 => PUT /api/alunos/1","timestamp":"2025-10-27T10:45:18.689Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:61452 => DELETE /api/alunos/1","timestamp":"2025-10-27T10:45:20.918Z"}
+{"level":"info","message":"[http:3000 Gestão de Alunos] ::ffff:127.0.0.1:65323 => DELETE /api/alunos/1","timestamp":"2025-10-27T10:45:23.907Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:65325 => GET /api/produtos","timestamp":"2025-10-27T10:45:27.269Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:65330 => POST /api/produtos","timestamp":"2025-10-27T10:45:32.782Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:59260 => POST /api/produtos","timestamp":"2025-10-27T10:45:35.169Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:59263 => POST /api/produtos","timestamp":"2025-10-27T10:45:38.366Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:59265 => POST /api/produtos","timestamp":"2025-10-27T10:45:42.700Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:59267 => POST /api/produtos","timestamp":"2025-10-27T10:45:43.883Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:59269 => POST /api/produtos","timestamp":"2025-10-27T10:45:45.476Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:59273 => PUT /api/produtos/1/stock","timestamp":"2025-10-27T10:45:49.170Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:53194 => POST /api/produtos","timestamp":"2025-10-27T10:45:53.779Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:53195 => POST /api/produtos","timestamp":"2025-10-27T10:45:55.839Z"}
+{"level":"info","message":"[http:3001 Inventário de Produtos] ::ffff:127.0.0.1:53200 => DELETE /api/produtos/1","timestamp":"2025-10-27T10:45:59.267Z"}
+{"level":"info","message":"[http:3002 Reservas de Hotel] ::ffff:127.0.0.1:53202 => GET /api/reservas","timestamp":"2025-10-27T10:46:02.900Z"}
